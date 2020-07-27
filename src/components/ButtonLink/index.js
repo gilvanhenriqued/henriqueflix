@@ -1,10 +1,12 @@
 import React from 'react';
 
-function ButtonLink() {
+function ButtonLink(props) {
+  // props = { className, href}
+
   return (
-    <nav>
- 
-    </nav>
+    <a href={props.href} className={props.className}>
+      {props.children}
+    </a>
   );
 }
 
