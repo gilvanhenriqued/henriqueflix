@@ -12,11 +12,17 @@ function CadastroVideo() {
   );
 }
 
+const Page404 = () => (
+  <div>Página não encontrada - Erro 404</div>
+)
+
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
+      <Route path="/" component={App} exact />
       <Route path="/cadastro/video" component={CadastroVideo}/>
-      <Route path="/" component={App}/>
+      <Route component={Page404} />
+
     </Switch>
   </BrowserRouter>,
   document.getElementById('root')
