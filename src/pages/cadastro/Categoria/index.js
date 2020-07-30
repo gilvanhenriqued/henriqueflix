@@ -3,24 +3,72 @@ import PageDefault from '../../../components/PageDefault'
 import { Link } from 'react-router-dom';
 
 function CadastroCategoria() {
-  const [categorias, setCategorias] =  useState(['Teste']);
-  const [nomeDaCategoria, setNomeDaCategoria] = useState('');
-  
+  const [categorias, setCategorias] =  useState([]);
+
+  const valoresIniciais = {
+    nome: '',
+    descricao: '',
+    cor: ''
+  }
+
+  const [formValues, setFormValues] = useState(valoresIniciais);
+
+  function setValue(chave, valor) {
+    setFormValues({
+      ...formValues,
+      [chave]: valor
+    });
+  }
+
+  function handleChange(event) {
+    const { getAttribute, value } = event.target;
+
+    setValue(
+      getAttribute('name'),
+      value
+    )
+  } 
 
   return (
     <PageDefault>
-      <h1>Cadastro Categoria: {nomeDaCategoria}</h1>
+      <h1>Cadastro Categoria: {formValues.nome}</h1>
 
       <form onSubmit={function handleSubmit(event) {
         event.preventDefault();
+        setCategorias([
+          ...categorias,
+          formValues
+        ]);
+        setFormValues(valoresIniciais);
       }}>
 
         <label>
           Nome da Categoria:
           <input
             type="text"
-            value={nomeDaCategoria}
-            onChange={(event) => setNomeDaCategoria(event.target.value)}
+            value={formValues.nome}
+            name="nome"
+            onChange={handleChange}
+          />
+        </label>
+
+        <label>
+          Descrição:
+          <textarea
+            type="text"
+            value={formValues.descricao}
+            name="descricao"
+            onChange={handleChange}
+          />
+        </label>
+
+        <label>
+          Cor:
+          <input
+            type="color"
+            value={formValues.cor}
+            name="cor"
+            onChange={handleChange}
           />
         </label>
 
@@ -30,10 +78,10 @@ function CadastroCategoria() {
       </form>
 
       <ul>
-        {categorias.map((categoria) => {
+        {categorias.map((categoria, index) => {
           return (
-            <li key={categoria}>
-              {categoria}
+            <li key={`${categoria}${index}`}>
+              {categoria.nome}
             </li>
           )
         })}
