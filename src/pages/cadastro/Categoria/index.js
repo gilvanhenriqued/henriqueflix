@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+
 function CadastroCategoria() {
   const [categorias, setCategorias] = useState([]);
 
@@ -65,7 +65,7 @@ function CadastroCategoria() {
         />
 
         <FormField
-          label="Cor da Categoria"
+          label="Cor"
           name="cor"
           value={formValues.cor}
           onChange={handleChange}
@@ -78,16 +78,13 @@ function CadastroCategoria() {
       </form>
 
       <ul>
-        {categorias.map((categoria, index) => (
-          <li key={`${categoria}${index}`}>
+        {categorias.map((categoria) => (
+          <li key={`${categoria.nome}`}>
             {categoria.nome}
           </li>
         ))}
       </ul>
 
-      <Link to="/">
-        Voltar para Home
-      </Link>
     </PageDefault>
   );
 }
