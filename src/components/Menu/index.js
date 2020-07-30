@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 function Menu() {
   return (
     <nav className="Menu">
-      <a to="/">
+      <Link to="/">
         <img className="Logo" src={Logo} alt="HenriqueFlix logo" />
-      </a>
+      </Link>
       
       <Button as={Link} className="ButtonLink" to="/cadastro/video">
         Novo Vídeo
