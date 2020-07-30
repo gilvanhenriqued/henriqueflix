@@ -1,16 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Home from './pages/Home';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
-function CadastroVideo() {
-  return (
-    <div>
-      Página de Cadastro de Video
-    </div>
-  );
-}
+import CadastroVideo from './pages/cadastro/Video';
 
 const Page404 = () => (
   <div>Página não encontrada - Erro 404</div>
@@ -19,7 +12,7 @@ const Page404 = () => (
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/" component={App} exact />
+      <Route path="/" component={Home} exact />
       <Route path="/cadastro/video" component={CadastroVideo}/>
       <Route component={Page404} />
 
