@@ -3,25 +3,24 @@ import PageDefault from '../../../components/PageDefault'
 import { Link } from 'react-router-dom';
 
 function CadastroCategoria() {
-  const [nomeDaCategoria, setNomeDaCategoria] = useState('Filmes');
+  const [categorias, setCategorias] =  useState(['Teste']);
+  const [nomeDaCategoria, setNomeDaCategoria] = useState('');
   
 
   return (
     <PageDefault>
       <h1>Cadastro Categoria: {nomeDaCategoria}</h1>
 
-      <form>
+      <form onSubmit={function handleSubmit(event) {
+        event.preventDefault();
+      }}>
 
         <label>
           Nome da Categoria:
           <input
             type="text"
             value={nomeDaCategoria}
-            onChange={function handleNomeCategoria(event){
-              console.log(nomeDaCategoria);
-              console.log(event.target.value);
-              setNomeDaCategoria(event.target.value);
-            }}
+            onChange={(event) => setNomeDaCategoria(event.target.value)}
           />
         </label>
 
@@ -30,6 +29,16 @@ function CadastroCategoria() {
         </button>
       </form>
 
+      <ul>
+        {categorias.map((categoria) => {
+          return (
+            <li key={categoria}>
+              {categoria}
+            </li>
+          )
+        })}
+      </ul>
+      
       <Link to="/">
         Voltar para Home
       </Link>
