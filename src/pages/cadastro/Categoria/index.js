@@ -7,7 +7,7 @@ function CadastroCategoria() {
   const [categorias, setCategorias] = useState([]);
 
   const valoresIniciais = {
-    nome: '',
+    titulo: '',
     descricao: '',
     cor: '#000000',
   };
@@ -54,15 +54,15 @@ function CadastroCategoria() {
     <PageDefault>
       <h1>
         Cadastro Categoria:
-        {formValues.nome}
+        {formValues.titulo}
       </h1>
 
       <form onSubmit={handleSubmit}>
 
         <FormField
-          label="Nome da Categoria"
-          name="nome"
-          value={formValues.nome}
+          label="Título da Categoria"
+          name="titulo"
+          value={formValues.titulo}
           onChange={handleChange}
           type="text"
         />
@@ -96,8 +96,8 @@ function CadastroCategoria() {
 
       <ul>
         {categorias.map((categoria) => (
-          <li key={`${categoria.nome}`}>
-            {categoria.nome}
+          <li key={`${categoria.titulo}`}>
+            {categoria.titulo}
           </li>
         ))}
       </ul>
