@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
@@ -8,23 +8,30 @@ import videosRepository from '../../../repositories/videos';
 
 function CadastroVideo() {
   const history = useHistory();
-  const [videos, setVideos] = useState([]);
 
   const valoresIniciais = {
     titulo: '',
     url: '',
+    categoria: '',
   };
 
   const { handleChange, formValues, clearForm } = useForm(valoresIniciais);
 
   function handleSubmit(e) {
     e.preventDefault();
-    history.push('/');
-    console.log('testando');
-    setVideos([
-      ...videos,
-      formValues,
-    ]);
+
+    const data = {
+      titulo: formValues.titulo,
+      url: formValues.url,
+      categoriaId: 1,
+    };
+
+    videosRepository.submitVideo(data)
+      .then(() => {
+        console.log('Cadastrou! :D');
+        history.push('/');
+      });
+
     clearForm();
   }
 
