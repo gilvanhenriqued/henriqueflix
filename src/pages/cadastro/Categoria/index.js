@@ -40,8 +40,10 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    const urlBase = 'http://localhost:8080/categorias';
-    fetch(urlBase)
+    const URL_BASE = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categorias'
+      : 'https://catolicoflix.herokuapp.com/categorias';
+    fetch(URL_BASE)
       .then(async (res) => {
         const data = await res.json();
         setCategorias([...data]);
@@ -85,6 +87,12 @@ function CadastroCategoria() {
           Cadastrar
         </Button>
       </form>
+
+      {categorias.length === 0 && (
+        <div>
+          Loading...
+        </div>
+      )}
 
       <ul>
         {categorias.map((categoria) => (
