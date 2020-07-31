@@ -2,36 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
-
-function useForm(valoresIniciais) {
-  const [formValues, setFormValues] = useState(valoresIniciais);
-
-  function setValue(chave, valor) {
-    setFormValues({
-      ...formValues,
-      [chave]: valor,
-    });
-  }
-
-  function handleChange(e) {
-    const event = e.target;
-
-    setValue(
-      event.getAttribute('name'),
-      event.value,
-    );
-  }
-
-  function clearForm() {
-    setFormValues(valoresIniciais);
-  }
-
-  return {
-    formValues,
-    handleChange,
-    clearForm,
-  };
-}
+import useForm from '../../../hooks/useForm';
 
 function CadastroCategoria() {
   const [categorias, setCategorias] = useState([]);
