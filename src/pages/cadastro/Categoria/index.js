@@ -44,7 +44,7 @@ function CadastroCategoria() {
     fetch(urlBase)
       .then(async (res) => {
         const data = await res.json();
-        console.log(data);
+        setCategorias([...data]);
       });
   }, []);
 
