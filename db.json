@@ -3,19 +3,19 @@
   "categorias": [
     {
       "id": 1,
-      "titulo": "Front End",
-      "cor": "#6BD1FF",
+      "titulo": "Ensinai-nos a Orar",
+      "cor": "red",
       "link_extra": {
-        "text": "Formação de Front End na Alura",
+        "text": "Canal do Padre Paulo Ricardo",
         "url": "https://www.alura.com.br/cursos-online-front-end"
       }
     },
     {
       "id": 2,
-      "titulo": "Back End",
+      "titulo": "Filmes Católicos",
       "cor": "#00C86F",
       "link_extra": {
-        "text": "Cursos de Back End na Alura",
+        "text": "Filmes católicos disponíveis no Youtube",
         "url": "https://www.alura.com.br/cursos-online-programacao"
       }
     },
@@ -30,7 +30,7 @@
     },
     {
       "id": 4,
-      "titulo": "Filmes",
+      "titulo": "Filmes Católicos",
       "cor": "orange"
     },
     {
@@ -47,8 +47,8 @@
     {
       "id": 1,
       "categoriaId": 1,
-      "titulo": "SEO com React",
-      "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+      "titulo": "A oração cristã",
+      "url": "https://www.youtube.com/watch?v=G7Or_fL7axo"
     },
     {
       "id": 2,

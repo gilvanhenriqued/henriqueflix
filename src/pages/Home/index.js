@@ -1,5 +1,5 @@
+/* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
-import dadosIniciais from '../../data/dados_iniciais.json';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 import PageDefault from '../../components/PageDefault';
@@ -17,7 +17,6 @@ function Home() {
         console.log(err.message);
       });
   }, []);
-  // http://localhost:8080/categorias?_embed=videos
 
   return (
     <PageDefault paddingAll={0}>
