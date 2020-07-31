@@ -3,15 +3,7 @@ import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 
-function CadastroCategoria() {
-  const [categorias, setCategorias] = useState([]);
-
-  const valoresIniciais = {
-    titulo: '',
-    descricao: '',
-    cor: '#000000',
-  };
-
+function useForm(valoresIniciais) {
   const [formValues, setFormValues] = useState(valoresIniciais);
 
   function setValue(chave, valor) {
@@ -30,13 +22,35 @@ function CadastroCategoria() {
     );
   }
 
+  function clearForm() {
+    setFormValues(valoresIniciais);
+  }
+
+  return {
+    formValues,
+    handleChange,
+    clearForm,
+  };
+}
+
+function CadastroCategoria() {
+  const [categorias, setCategorias] = useState([]);
+
+  const valoresIniciais = {
+    titulo: '',
+    descricao: '',
+    cor: '#000000',
+  };
+
+  const { handleChange, formValues, clearForm } = useForm(valoresIniciais);
+
   function handleSubmit(e) {
     e.preventDefault();
     setCategorias([
       ...categorias,
       formValues,
     ]);
-    setFormValues(valoresIniciais);
+    clearForm();
   }
 
   useEffect(() => {
