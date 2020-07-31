@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
@@ -38,6 +38,15 @@ function CadastroCategoria() {
     ]);
     setFormValues(valoresIniciais);
   }
+
+  useEffect(() => {
+    const urlBase = 'http://localhost:8080/categorias';
+    fetch(urlBase)
+      .then(async (res) => {
+        const data = await res.json();
+        console.log(data);
+      });
+  }, []);
 
   return (
     <PageDefault>
