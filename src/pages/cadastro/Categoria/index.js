@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
@@ -6,6 +7,8 @@ import useForm from '../../../hooks/useForm';
 import categoriesRepository from '../../../repositories/categorias';
 
 function CadastroCategoria() {
+  const history = useHistory();
+
   const [categorias, setCategorias] = useState([]);
 
   const valoresIniciais = {
@@ -22,6 +25,20 @@ function CadastroCategoria() {
       ...categorias,
       formValues,
     ]);
+
+    const data = {
+      titulo: formValues.titulo,
+      cor: formValues.cor,
+      descricao: formValues.descricao,
+    };
+
+    categoriesRepository
+      .submitCategory(data)
+      .then((dataSubmited) => {
+        console.log(`Cadastrou! :D : ${dataSubmited}`);
+        history.push('/');
+      });
+
     clearForm();
   }
 

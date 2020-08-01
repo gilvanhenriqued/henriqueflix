@@ -4,42 +4,31 @@
       "id": 1,
       "titulo": "Ensinai-nos a Orar",
       "cor": "red",
-      "link_extra": {
-        "text": "Canal do Padre Paulo Ricardo",
-        "url": "https://www.alura.com.br/cursos-online-front-end"
-      }
+      "descricao": "Curso por Padre Paulo Ricardo"
     },
     {
       "id": 2,
       "titulo": "Filmes Católicos",
       "cor": "#00C86F",
-      "link_extra": {
-        "text": "Filmes católicos disponíveis no Youtube",
-        "url": "https://www.alura.com.br/cursos-online-programacao"
-      }
+      "descricao": "Filmes disponíveis no Youtube"
     },
     {
       "id": 3,
-      "titulo": "Data Science e Inteligência Artificial",
+      "titulo": "O Santo Terço",
       "cor": "#9cd33b",
-      "link_extra": {
-        "text": "Cursos de Data Science na Alura",
-        "url": "https://www.alura.com.br/cursos-online-mobile"
-      }
+      "descricao": "Reflexões e meditação dos mistérios"
     },
     {
       "id": 4,
-      "titulo": "Filmes",
-      "cor": "orange"
+      "titulo": "Sagradas Escrituras",
+      "cor": "orange",
+      "descricao": "Catequese sobre a Palavra de Deus"
     },
     {
-      "id": 5,
-      "titulo": "Games",
-      "cor": "red",
-      "link_extra": {
-        "text": "Formação de Jogos na Alura",
-        "url": "https://www.alura.com.br/cursos-online-front-end"
-      }
+      "titulo": "Teste",
+      "cor": "#f10404",
+      "descricao": "Categoria de teste",
+      "id": 5
     }
   ],
   "videos": [
@@ -236,6 +225,12 @@
       "url": "https://www.youtube.com/watch?v=vkZ4_6uETvg",
       "categoriaId": 1,
       "id": 31
+    },
+    {
+      "titulo": "Test video",
+      "url": "https://www.youtube.com/watch?v=kk8wsWgclN0",
+      "categoriaId": 8,
+      "id": 32
     }
   ]
 }
