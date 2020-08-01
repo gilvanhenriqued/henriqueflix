@@ -13,32 +13,21 @@ function CadastroCategoria() {
 
   const [categorias, setCategorias] = useState([]);
 
-  const [errors, setErrors] = useState({});
-
   const valoresIniciais = {
     titulo: '',
     descricao: '',
     cor: '#000000',
   };
 
-  const { handleChange, formValues, clearForm } = useForm(valoresIniciais);
-
-  function validate(values) {
-    const isShortTitle = values.titulo.length < 4;
-
-    isShortTitle
-      ? errors.titulo = 'O título precisa ter mais do que 3 caracteres..'
-      : errors.titulo = undefined;
-
-    return errors;
-  }
+  const {
+    handleChange,
+    formValues,
+    clearForm,
+    errors,
+  } = useForm(valoresIniciais);
 
   function handleSubmit(e) {
     e.preventDefault();
-
-    console.log(formValues);
-
-    setErrors(validate(formValues));
 
     /* setCategorias([
       ...categorias,
@@ -77,7 +66,7 @@ function CadastroCategoria() {
 
       <form onSubmit={handleSubmit}>
 
-        {errors.titulo !== undefined && <span className="formField_error">{errors.titulo}</span>}
+        {errors.titulo && <span className="formField_error">{errors.titulo}</span>}
         <FormField
           label="Título da Categoria"
           name="titulo"
