@@ -73,6 +73,9 @@ function CadastroCategoria() {
         </Button>
       </form>
 
+      <br />
+      <br />
+
     </PageDefault>
   );
 }
