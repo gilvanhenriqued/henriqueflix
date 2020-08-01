@@ -29,3 +29,9 @@ a {
   display: flex;
   flex-direction: column;
 }
+
+.formField_error{
+  color: #d93025;
+  font-size: 16px;
+  padding-bottom: 10px;
+}

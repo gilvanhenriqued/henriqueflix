@@ -14,6 +14,8 @@ function useForm(valoresIniciais) {
   }
 
   function validate(values) {
+    // TODO: validate url and category / not permit submit without validade
+
     const isShortTitle = values.titulo.length < 4;
 
     isShortTitle
@@ -25,8 +27,6 @@ function useForm(valoresIniciais) {
 
   function handleChange(e) {
     const event = e.target;
-
-    console.log(formValues);
 
     setErrors(validate(formValues));
 

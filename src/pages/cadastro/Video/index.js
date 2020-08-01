@@ -14,7 +14,7 @@ function CadastroVideo() {
 
   const categoryTitles = categorias.map(({ titulo }) => titulo);
 
-  const { handleChange, formValues } = useForm({
+  const { handleChange, formValues, errors } = useForm({
     titulo: '',
     url: '',
     categoria: '',
@@ -55,6 +55,7 @@ function CadastroVideo() {
 
       <form onSubmit={handleSubmit}>
 
+        {errors.titulo && <span className="formField_error">{errors.titulo}</span>}
         <FormField
           label="Título do Vídeo"
           name="titulo"
