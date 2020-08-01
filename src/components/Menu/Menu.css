@@ -3,7 +3,7 @@
 }
 @media (max-width: 800px) {
   .Logo {
-    max-width: 105px;
+    max-width: 130px;
   }
 }
 
@@ -32,7 +32,7 @@ body {
 }
 @media (max-width: 800px) {
   .Menu {
-    height: 40px;
+    height: 55px;
     justify-content: center;
   }
   body {

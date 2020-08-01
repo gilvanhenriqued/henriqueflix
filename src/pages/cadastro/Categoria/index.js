@@ -34,8 +34,8 @@ function CadastroCategoria() {
 
     categoriesRepository
       .submitCategory(data)
-      .then((dataSubmited) => {
-        console.log(`Cadastrou! :D : ${dataSubmited}`);
+      .then(() => {
+        console.log('Cadastrou! :D');
         history.push('/');
       });
 

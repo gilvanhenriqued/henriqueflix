@@ -41,14 +41,14 @@
     {
       "id": 2,
       "categoriaId": 1,
-      "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
-      "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
+      "titulo": "O ensino da prece cristã",
+      "url": "https://www.youtube.com/watch?v=vkZ4_6uETvg&list=PLHklNC5Otp0HxghO9_SouSr_fbuH7Ke18&index=2&t=0s"
     },
     {
       "id": 3,
       "categoriaId": 1,
-      "titulo": "Componentização com VanillaJS #AluraMais",
-      "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
+      "titulo": "O primeiro passo para começar a rezar",
+      "url": "https://www.youtube.com/watch?v=G7Or_fL7axo&list=PLHklNC5Otp0HxghO9_SouSr_fbuH7Ke18&index=2"
     },
     {
       "id": 4,
@@ -175,62 +175,6 @@
       "categoriaId": 5,
       "titulo": "Resident Evil 8",
       "url": "https://www.youtube.com/watch?v=JSapXD9vxYA"
-    },
-    {
-      "titulo": "Novo video",
-      "url": "https://www.youtube.com/watch?v=kk8wsWgclN0",
-      "categoria": 1,
-      "id": 25
-    },
-    {
-      "titulo": "desenvolvimento",
-      "url": "https://youtu.be/kk8wsWgclN0",
-      "categoria": 1,
-      "id": 26
-    },
-    {
-      "titulo": "Talks",
-      "url": "https://www.youtube.com/watch?v=kk8wsWgclN0",
-      "categoriaId": 1,
-      "id": 27
-    },
-    {
-      "titulo": "desenvolvimento",
-      "url": "https://www.youtube.com/watch?v=kk8wsWgclN0",
-      "categoriaId": 1,
-      "id": 28
-    },
-    {
-      "titulo": "desenvolvimento",
-      "url": "https://www.youtube.com/watch?v=kk8wsWgclN0",
-      "categoriaId": 1,
-      "id": 29
-    },
-    {
-      "titulo": "Vídeo Padrão",
-      "url": "https://www.youtube.com/watch?v=vkZ4_6uETvg",
-      "categoriaId": {
-        "id": 1,
-        "titulo": "Ensinai-nos a Orar",
-        "cor": "red",
-        "link_extra": {
-          "text": "Canal do Padre Paulo Ricardo",
-          "url": "https://www.alura.com.br/cursos-online-front-end"
-        }
-      },
-      "id": 30
-    },
-    {
-      "titulo": "Vídeo Padrão",
-      "url": "https://www.youtube.com/watch?v=vkZ4_6uETvg",
-      "categoriaId": 1,
-      "id": 31
-    },
-    {
-      "titulo": "Test video",
-      "url": "https://www.youtube.com/watch?v=kk8wsWgclN0",
-      "categoriaId": 8,
-      "id": 32
     }
   ]
 }

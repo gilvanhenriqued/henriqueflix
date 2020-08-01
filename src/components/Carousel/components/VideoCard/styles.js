@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
 
 export const VideoCardContainer = styled.a`
@@ -8,8 +9,8 @@ export const VideoCardContainer = styled.a`
   cursor: pointer;
   color: white;
   flex: 0 0 298px;
-  width: 298px;
-  height: 197px;
+  width: 270px;
+  height: 170px;
   background-image: ${({ url }) => `url(${url})`};
   background-size: cover;
   background-position: center;
