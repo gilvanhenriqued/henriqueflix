@@ -3,6 +3,7 @@ import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks/useForm';
+import categoriesRepository from '../../../repositories/categorias';
 
 function CadastroCategoria() {
   const [categorias, setCategorias] = useState([]);
@@ -25,13 +26,10 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    const URL_BASE = window.location.hostname.includes('localhost')
-      ? 'http://localhost:8080/categorias'
-      : 'https://catolicoflix.herokuapp.com/categorias';
-    fetch(URL_BASE)
-      .then(async (res) => {
-        const data = await res.json();
-        setCategorias([...data]);
+    categoriesRepository
+      .getAll()
+      .then((res) => {
+        setCategorias(res);
       });
   }, []);
 

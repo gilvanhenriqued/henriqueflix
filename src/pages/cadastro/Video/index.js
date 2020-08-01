@@ -15,9 +15,9 @@ function CadastroVideo() {
   const categoryTitles = categorias.map(({ titulo }) => titulo);
 
   const { handleChange, formValues } = useForm({
-    titulo: 'Vídeo Padrão',
-    url: 'https://www.youtube.com/watch?v=vkZ4_6uETvg',
-    categoria: 'Ensinai-nos a Orar',
+    titulo: '',
+    url: '',
+    categoria: '',
   });
 
   useEffect(() => {
