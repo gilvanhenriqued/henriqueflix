@@ -28,6 +28,8 @@ function CadastroCategoria() {
   function handleSubmit(e) {
     e.preventDefault();
 
+    if (errors.titulo) return;
+
     setCategorias([
       ...categorias,
       formValues,

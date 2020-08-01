@@ -18,6 +18,7 @@ function CadastroVideo() {
     titulo: '',
     url: '',
     categoria: '',
+    listValidCategories: categoryTitles,
   });
 
   useEffect(() => {
@@ -31,7 +32,7 @@ function CadastroVideo() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (errors.titulo || errors.url) return;
+    if (errors.titulo || errors.url || errors.categoria) return;
 
     // eslint-disable-next-line arrow-body-style
     const categoriaEscolhida = categorias.find((categoria) => {
@@ -48,6 +49,8 @@ function CadastroVideo() {
       .then(() => {
         console.log('Cadastrou! :D');
         history.push('/');
+
+        // TODO: show success alert at screen
       });
   }
 
@@ -73,6 +76,7 @@ function CadastroVideo() {
           onChange={handleChange}
         />
 
+        {errors.categoria && <span className="formField_error">{errors.categoria}</span>}
         <FormField
           label="Categoria"
           name="categoria"

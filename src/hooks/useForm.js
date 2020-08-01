@@ -14,8 +14,6 @@ function useForm(valoresIniciais) {
   }
 
   function validateCategoria(values) {
-    // TODO: validate url and category / not permit submit without validade
-
     const isShortTitle = values.titulo.length < 4;
 
     isShortTitle
@@ -26,18 +24,23 @@ function useForm(valoresIniciais) {
   }
 
   function validateVideo(values) {
-    // TODO: validate url and category / not permit submit without validade
+    const validCategories = valoresIniciais.listValidCategories;
 
     const isShortTitle = values.titulo.length < 4;
-    const isUrlValid = values.url.includes('youtu');
+    const isValidUrl = values.url.includes('youtu');
+    const isValidCategory = validCategories.includes(values.categoria);
 
     isShortTitle
       ? errors.titulo = 'O título precisa ter mais do que 3 caracteres...'
       : errors.titulo = undefined;
 
-    isUrlValid
+    isValidUrl
       ? errors.url = undefined
       : errors.url = 'O link deve ser de um vídeo do Youtube...';
+
+    isValidCategory
+      ? errors.categoria = undefined
+      : errors.categoria = 'Escolha uma das categorias da lista...';
 
     return errors;
   }
@@ -47,14 +50,19 @@ function useForm(valoresIniciais) {
 
     const paginaUrl = window.location.pathname;
 
-    paginaUrl === '/cadastro/categoria'
-      ? setErrors(validateCategoria(formValues))
-      : setErrors(validateVideo(formValues));
-
-    setValue(
-      event.getAttribute('name'),
-      event.value,
-    );
+    if (paginaUrl === '/cadastro/categoria') {
+      setErrors(validateCategoria(formValues));
+      setValue(
+        event.getAttribute('name'),
+        event.value,
+      );
+    } else {
+      setErrors(validateVideo(formValues));
+      setValue(
+        event.getAttribute('name'),
+        event.value,
+      );
+    }
   }
 
   function clearForm() {
