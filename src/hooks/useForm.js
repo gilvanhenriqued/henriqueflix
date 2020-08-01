@@ -13,14 +13,31 @@ function useForm(valoresIniciais) {
     });
   }
 
-  function validate(values) {
+  function validateCategoria(values) {
     // TODO: validate url and category / not permit submit without validade
 
     const isShortTitle = values.titulo.length < 4;
 
     isShortTitle
-      ? errors.titulo = 'O título precisa ter mais do que 3 caracteres..'
+      ? errors.titulo = 'O título precisa ter mais do que 3 caracteres...'
       : errors.titulo = undefined;
+
+    return errors;
+  }
+
+  function validateVideo(values) {
+    // TODO: validate url and category / not permit submit without validade
+
+    const isShortTitle = values.titulo.length < 4;
+    const isUrlValid = values.url.includes('youtu');
+
+    isShortTitle
+      ? errors.titulo = 'O título precisa ter mais do que 3 caracteres...'
+      : errors.titulo = undefined;
+
+    isUrlValid
+      ? errors.url = undefined
+      : errors.url = 'O link deve ser de um vídeo do Youtube...';
 
     return errors;
   }
@@ -28,7 +45,11 @@ function useForm(valoresIniciais) {
   function handleChange(e) {
     const event = e.target;
 
-    setErrors(validate(formValues));
+    const paginaUrl = window.location.pathname;
+
+    paginaUrl === '/cadastro/categoria'
+      ? setErrors(validateCategoria(formValues))
+      : setErrors(validateVideo(formValues));
 
     setValue(
       event.getAttribute('name'),

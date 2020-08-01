@@ -31,6 +31,8 @@ function CadastroVideo() {
   function handleSubmit(e) {
     e.preventDefault();
 
+    if (errors.titulo || errors.url) return;
+
     // eslint-disable-next-line arrow-body-style
     const categoriaEscolhida = categorias.find((categoria) => {
       return categoria.titulo === formValues.categoria;
@@ -63,6 +65,7 @@ function CadastroVideo() {
           onChange={handleChange}
         />
 
+        {errors.url && <span className="formField_error">{errors.url}</span>}
         <FormField
           label="Url do vídeo"
           name="url"
