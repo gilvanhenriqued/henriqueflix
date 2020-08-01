@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import VideoIframeResponsive from './components/VideoIframeResponsive';
-import { BannerMainContainer, ContentAreaContainer, WatchButton } from './styles';
+import { BannerMainContainer, ContentAreaContainer } from './styles';
 
 function getYouTubeId(youtubeURL) {
   return youtubeURL

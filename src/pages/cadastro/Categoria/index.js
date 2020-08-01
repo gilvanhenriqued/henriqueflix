@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable react/style-prop-object */
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
@@ -11,6 +13,8 @@ function CadastroCategoria() {
 
   const [categorias, setCategorias] = useState([]);
 
+  const [errors, setErrors] = useState({});
+
   const valoresIniciais = {
     titulo: '',
     descricao: '',
@@ -19,9 +23,24 @@ function CadastroCategoria() {
 
   const { handleChange, formValues, clearForm } = useForm(valoresIniciais);
 
+  function validate(values) {
+    const isShortTitle = values.titulo.length < 4;
+
+    isShortTitle
+      ? errors.titulo = 'O título precisa ter mais do que 3 caracteres..'
+      : errors.titulo = undefined;
+
+    return errors;
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
-    setCategorias([
+
+    console.log(formValues);
+
+    setErrors(validate(formValues));
+
+    /* setCategorias([
       ...categorias,
       formValues,
     ]);
@@ -39,7 +58,7 @@ function CadastroCategoria() {
         history.push('/');
       });
 
-    clearForm();
+    clearForm(); */
   }
 
   useEffect(() => {
@@ -53,12 +72,12 @@ function CadastroCategoria() {
   return (
     <PageDefault>
       <h1>
-        Cadastro Categoria:
-        {formValues.titulo}
+        Cadastro Categoria
       </h1>
 
       <form onSubmit={handleSubmit}>
 
+        {errors.titulo !== undefined && <span className="formField_error">{errors.titulo}</span>}
         <FormField
           label="Título da Categoria"
           name="titulo"
@@ -67,6 +86,7 @@ function CadastroCategoria() {
           type="text"
         />
 
+        {errors.descricao && <span className="formField_error">{errors.descricao}</span>}
         <FormField
           label="Descrição"
           name="descricao"
@@ -90,6 +110,16 @@ function CadastroCategoria() {
 
       <br />
       <br />
+
+      <style>
+        {`
+          .formField_error{
+            color: #d93025;
+            font-size: 16px;
+            padding-bottom: 10px;
+          }
+        `}
+      </style>
 
     </PageDefault>
   );
