@@ -50,7 +50,7 @@ function CadastroVideo() {
         console.log('Cadastrou! :D');
         history.push('/');
 
-        // TODO: show success alert at screen
+        // TODO: show success dialog timer at screen
       });
   }
 
