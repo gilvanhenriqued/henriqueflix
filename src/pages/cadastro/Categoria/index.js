@@ -23,10 +23,15 @@ function CadastroCategoria() {
     formValues,
     clearForm,
     errors,
+    setErrors,
+    validateCategoria,
   } = useForm(valoresIniciais);
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    setErrors(validateCategoria(formValues));
+    handleChange(e);
 
     if (errors.titulo) return;
 

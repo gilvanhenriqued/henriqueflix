@@ -48,21 +48,12 @@ function useForm(valoresIniciais) {
   function handleChange(e) {
     const event = e.target;
 
-    const paginaUrl = window.location.pathname;
+    // const paginaUrl = window.location.pathname;
 
-    if (paginaUrl === '/cadastro/categoria') {
-      setErrors(validateCategoria(formValues));
-      setValue(
-        event.getAttribute('name'),
-        event.value,
-      );
-    } else {
-      setErrors(validateVideo(formValues));
-      setValue(
-        event.getAttribute('name'),
-        event.value,
-      );
-    }
+    setValue(
+      event.getAttribute('name'),
+      event.value,
+    );
   }
 
   function clearForm() {
@@ -74,6 +65,9 @@ function useForm(valoresIniciais) {
     handleChange,
     clearForm,
     errors,
+    setErrors,
+    validateCategoria,
+    validateVideo,
   };
 }
 

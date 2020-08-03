@@ -14,7 +14,14 @@ function CadastroVideo() {
 
   const categoryTitles = categorias.map(({ titulo }) => titulo);
 
-  const { handleChange, formValues, errors } = useForm({
+  // eslint-disable-next-line object-curly-newline
+  const {
+    handleChange,
+    formValues,
+    errors,
+    setErrors,
+    validateVideo,
+  } = useForm({
     titulo: '',
     url: '',
     categoria: '',
@@ -31,6 +38,9 @@ function CadastroVideo() {
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    setErrors(validateVideo(formValues));
+    handleChange(e);
 
     if (errors.titulo || errors.url || errors.categoria) return;
 
