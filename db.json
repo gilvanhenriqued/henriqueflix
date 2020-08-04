@@ -9,13 +9,13 @@
     {
       "id": 2,
       "titulo": "Filmes Católicos",
-      "cor": "#00C86F",
+      "cor": "#291BEE",
       "descricao": "Filmes disponíveis no Youtube"
     },
     {
       "id": 3,
       "titulo": "O Santo Terço",
-      "cor": "#9cd33b",
+      "cor": "#9cd33c",
       "descricao": "Reflexões e meditação dos mistérios"
     },
     {
@@ -42,13 +42,156 @@
       "id": 2,
       "categoriaId": 1,
       "titulo": "O ensino da prece cristã",
-      "url": "https://www.youtube.com/watch?v=vkZ4_6uETvg&list=PLHklNC5Otp0HxghO9_SouSr_fbuH7Ke18&index=2&t=0s"
+      "url": "https://www.youtube.com/watch?v=vkZ4_6uETvg&list=PLHklNC5Otp0HxghO9_SouSr_fbuH7Ke18&index=1"
     },
     {
       "id": 3,
       "categoriaId": 1,
       "titulo": "O primeiro passo para começar a rezar",
       "url": "https://www.youtube.com/watch?v=G7Or_fL7axo&list=PLHklNC5Otp0HxghO9_SouSr_fbuH7Ke18&index=2"
+    },
+    {
+      "id": 4,
+      "categoriaId": 1,
+      "titulo": "Não rezeis como os pagãos",
+      "url": "https://www.youtube.com/watch?v=SvwHb4T8DOk&list=PLHklNC5Otp0HxghO9_SouSr_fbuH7Ke18&index=3"
+    },
+    {
+      "id": 5,
+      "categoriaId": 1,
+      "titulo": "Estar na presença de Jesus Ressuscitado",
+      "url": "https://www.youtube.com/watch?v=G7Or_fL7axo&list=PLHklNC5Otp0HxghO9_SouSr_fbuH7Ke18&index=4"
+    },
+    {
+      "id": 6,
+      "categoriaId": 1,
+      "titulo": "Onde você está enquanto reza?",
+      "url": "https://www.youtube.com/watch?v=G7Or_fL7axo&list=PLHklNC5Otp0HxghO9_SouSr_fbuH7Ke18&index=5"
+    },
+
+
+    {
+      "id": 1,
+      "categoriaId": 2,
+      "titulo": "A HISTÓRIA DE LOURDES - SANTA BERNADETTE SOUBIROUS",
+      "url": "https://www.youtube.com/watch?v=wkqzLa68glo&list=PLvslXwFoTeiUWjXdmABONDmW5wqVn9zRt"
+    },
+    {
+      "id": 2,
+      "categoriaId": 2,
+      "titulo": "Nossa Senhora de Fátima",
+      "url": "https://www.youtube.com/watch?v=KM5trAyZTRI&list=PLvslXwFoTeiUWjXdmABONDmW5wqVn9zRt&index=11"
+    },
+    {
+      "id": 3,
+      "categoriaId": 2,
+      "titulo": "Karol, o homem que se tornou Papa",
+      "url": "https://www.youtube.com/watch?v=KM5trAyZTRI&list=PLvslXwFoTeiUWjXdmABONDmW5wqVn9zRt&index=15"
+    },
+    {
+      "id": 4,
+      "categoriaId": 2,
+      "titulo": "Santa Teresinha do menino Jesus",
+      "url": "https://www.youtube.com/watch?v=KM5trAyZTRI&list=PLvslXwFoTeiUWjXdmABONDmW5wqVn9zRt&index=27"
+    },
+    {
+      "id": 5,
+      "categoriaId": 2,
+      "titulo": "MOSCATI - O Doutor que virou Santo",
+      "url": "https://www.youtube.com/watch?v=KM5trAyZTRI&list=PLvslXwFoTeiUWjXdmABONDmW5wqVn9zRt&index=33"
+    },
+
+    {
+      "id": 1,
+      "categoriaId": 3,
+      "titulo": "O Segredo do Rosário",
+      "url": "https://www.youtube.com/watch?v=_Is8StfekD8&t"
+    },
+    {
+      "id": 2,
+      "categoriaId": 3,
+      "titulo": "Como rezar bem o Santo Rosário",
+      "url": "https://www.youtube.com/watch?v=ouk9cgjvUbI&t"
+    },
+    {
+      "id": 3,
+      "categoriaId": 3,
+      "titulo": "Mistérios Gozosos | Santo Terço - Frei Gilson",
+      "url": "https://www.youtube.com/watch?v=EKTz4C44aEc"
+    },
+    {
+      "id": 4,
+      "categoriaId": 3,
+      "titulo": "Mistérios Dolorosos | Santo Terço - Frei Gilson",
+      "url": "https://www.youtube.com/watch?v=0_jGY4bB0lw"
+    },
+    {
+      "id": 5,
+      "categoriaId": 3,
+      "titulo": "Mistérios Gloriosos | Santo Terço - Frei Gilson",
+      "url": "https://www.youtube.com/watch?v=j84Cg9GYO3o"
+    },
+
+    {
+      "id": 1,
+      "categoriaId": 4,
+      "titulo": "As Sagradas Escrituras e a nossa vida espiritual",
+      "url": "https://www.youtube.com/watch?v=3cZhmHnWBTc"
+    },
+    {
+      "id": 2,
+      "categoriaId": 4,
+      "titulo": "Como rezar com as Sagradas Escrituras? ",
+      "url": "https://www.youtube.com/watch?v=0W1oUB34Yvc"
+    },
+    {
+      "id": 3,
+      "categoriaId": 4,
+      "titulo": "A Bíblia e a Igreja",
+      "url": "https://www.youtube.com/watch?v=D75JAisGQ8E"
+    },
+    {
+      "id": 4,
+      "categoriaId": 4,
+      "titulo": "Relação entre Bíblia e a Igreja",
+      "url": "https://www.youtube.com/watch?v=VEJHXpID8aA"
+    },
+    {
+      "id": 5,
+      "categoriaId": 4,
+      "titulo": "A Sagrada Escritura",
+      "url": "https://www.youtube.com/watch?v=wR5zFnUdlpM"
+    },
+
+    {
+      "id": 1,
+      "categoriaId": 5,
+      "titulo": "Maria, tu sabias?",
+      "url": "https://www.youtube.com/watch?v=hC1fH1unGJg"
+    },
+    {
+      "id": 2,
+      "categoriaId": 5,
+      "titulo": "Nas Asas do Senhor",
+      "url": "https://www.youtube.com/watch?v=YZs0xQneRMs&list=PL8ZEFRa3pgdUUURDqAcN_B1oV4X1bz1S6"
+    },
+    {
+      "id": 3,
+      "categoriaId": 5,
+      "titulo": "Não temerei MSH",
+      "url": "https://www.youtube.com/watch?v=w5FewC8N42M"
+    },
+    {
+      "id": 4,
+      "categoriaId": 5,
+      "titulo": "Eu Seguirei - Frei Gilson",
+      "url": "https://www.youtube.com/watch?v=artng5iskMw"
+    },
+    {
+      "id": 5,
+      "categoriaId": 5,
+      "titulo": "Humano amor de Deus - Pe Fábio de Melo",
+      "url": "https://www.youtube.com/watch?v=GwX6g4_c6AQ"
     }
   ]
 }
